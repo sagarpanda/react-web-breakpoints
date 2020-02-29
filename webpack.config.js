@@ -35,6 +35,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
         template: require('html-webpack-template'),
+        title: 'React Web Breakpoints',
         inject: false,
         appMountId: 'app',
         filename: 'index.html'
