@@ -54,8 +54,8 @@ export default withBreakpoints(App);
 ### BreakpointsProvider - Props
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
-| breakpoints | object | { sm: 0, md: 768, lg: 1024 }
-| defaultBreakpoint | string | null
+| breakpoints | object | { sm: 0, md: 768, lg: 1024 } | |
+| defaultBreakpoint | string | null | |
 
 ### Source Code Run
 
