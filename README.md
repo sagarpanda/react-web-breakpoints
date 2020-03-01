@@ -1,5 +1,6 @@
 # React Web Breakpoints
 Responsive design based on breakpoints
+[Click here to see the demo.](https://sagarpanda.github.io/react-web-breakpoints/)
 ### NPM Installation
 ```sh
 $ npm install react-web-breakpoints
@@ -10,6 +11,7 @@ import {
   BreakpointsProvider,
   useBreakpoints,
   withBreakpoints,
+  BreakShowAt,
   Context
 } from 'react-web-breakpoints';
 ```
@@ -50,6 +52,21 @@ const App = ({ name, media }) => {
 };
 
 export default withBreakpoints(App);
+```
+```javascript
+// App.js with BreakShowAt
+import React from "react";
+import { BreakShowAt } from 'react-web-breakpoints';
+
+const App = ({ name, media }) => {
+  return (
+    <BreakShowAt md lg>
+      <div>This content shows for md and lg screens.</div>
+    </BreakShowAt>
+  );
+};
+
+export default App;
 ```
 ### BreakpointsProvider - Props
 | Name | Type | Default | Description |
