@@ -1,22 +1,24 @@
 # React Web Breakpoints
 Responsive design based on breakpoints
 [Click here to see the demo.](https://sagarpanda.github.io/react-web-breakpoints/)
-### NPM Installation
+### Install
 ```sh
-$ npm install react-web-breakpoints
+# with npm
+$ npm install react-web-breakpoints --save
+# or with yarn
+$ yarn add react-web-breakpoints
 ```
-### Use
+### Usage
 ```javascript
 import {
   BreakpointsProvider,
   useBreakpoints,
   withBreakpoints,
-  BreakShowAt,
-  Context
+  BreakShowAt
 } from 'react-web-breakpoints';
 ```
+BreakpointsProvider
 ```javascript
-// main.js - Provider
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
@@ -30,8 +32,8 @@ ReactDOM.render(
   , mountNode
 );
 ```
+With Hooks - useBreakpoints (it returns current breakpoint e.g. lg)
 ```javascript
-// App.js with Hooks
 import React from "react";
 import { useBreakpoints } from 'react-web-breakpoints';
 
@@ -42,8 +44,8 @@ const App = ({ name, media }) => {
 
 export default App;
 ```
+With HOC - withBreakpoints (wrapped component i.e. App receives new props `media`)
 ```javascript
-// App.js with HOC
 import React from "react";
 import { withBreakpoints } from 'react-web-breakpoints';
 
@@ -53,12 +55,12 @@ const App = ({ name, media }) => {
 
 export default withBreakpoints(App);
 ```
+With BreakShowAt - renders its children when current breakpoint (say lg) match with its props (i.e. md and lg)
 ```javascript
-// App.js with BreakShowAt
 import React from "react";
 import { BreakShowAt } from 'react-web-breakpoints';
 
-const App = ({ name, media }) => {
+const App = ({ name }) => {
   return (
     <BreakShowAt md lg>
       <div>This content shows for md and lg screens.</div>
@@ -71,8 +73,8 @@ export default App;
 ### BreakpointsProvider - Props
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
-| breakpoints | object | { sm: 0, md: 768, lg: 1024 } | |
-| defaultBreakpoint | string | null | |
+| breakpoints | object | { sm: 0, md: 768, lg: 1024 } | By default 0 < sm < 768, 768 < md < 1024, 1024 < lg. Object structure `{ [string]: [number], ... }` e.g. { mobile: 0, tablet: 768, desktop: 1024 } |
+| defaultBreakpoint | string | null | By default null. For initial render or if window width does not fall under any range mentioned in `breakpoints` props. |
 
 ### Source Code Run
 
