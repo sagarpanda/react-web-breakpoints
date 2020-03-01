@@ -1,6 +1,8 @@
+![NPM Publish](https://github.com/sagarpanda/react-web-breakpoints/workflows/NPM%20Publish/badge.svg)
+[![npm](https://img.shields.io/npm/v/react-web-breakpoints.svg)](https://www.npmjs.com/package/react-web-breakpoints)
+
 # React Web Breakpoints
-Responsive design based on breakpoints
-[Click here to see the demo.](https://sagarpanda.github.io/react-web-breakpoints/)
+Responsive design based on breakpoints [demo](https://sagarpanda.github.io/react-web-breakpoints/)
 ### Install
 ```sh
 # with npm

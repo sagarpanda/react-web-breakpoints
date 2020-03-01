@@ -1,11 +1,22 @@
 {
   "name": "react-web-breakpoints",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Responsive design based on breakpoints.",
   "main": "libs/index.js",
+  "homepage": "https://sagarpanda.github.io/react-web-breakpoints",
   "repository": "https://github.com/sagarpanda/react-web-breakpoints.git",
   "author": "Sagar Panda",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "responsive",
+    "breakpoints",
+    "breakpoint",
+    "component"
+  ],
+  "files": [
+    "libs"
+  ],
   "scripts": {
     "clean": "rm dist/bundle.js",
     "build-libs": "rm -rf libs && babel src -d libs",
@@ -22,14 +33,16 @@
     "babel-loader": "^8.0.6",
     "html-webpack-plugin": "^3.2.0",
     "html-webpack-template": "^6.2.0",
+    "react-dom": "^16.8.0",
+    "react-hot-loader": "^4.12.19",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-hot-loader": "^4.12.19"
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
   }
 }
