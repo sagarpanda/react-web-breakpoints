@@ -30,7 +30,10 @@ const config = {
     }
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    port: 9000,
+    host: '0.0.0.0',
+    disableHostCheck: true
   },
   plugins: [
     new HtmlWebpackPlugin({

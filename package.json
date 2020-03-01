@@ -1,6 +1,6 @@
 {
   "name": "react-web-breakpoints",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Responsive design based on breakpoints.",
   "main": "libs/index.js",
   "homepage": "https://sagarpanda.github.io/react-web-breakpoints",
